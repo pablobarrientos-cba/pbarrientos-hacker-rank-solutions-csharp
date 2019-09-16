@@ -5,3 +5,4 @@ My Hacker Rank Solutions on C# language.
 - Birthday Cake Candles Challenge Solution
 - Time Conversion Challenge Solution
 - Grading Students Challenge Solution
+- Apple and Oranges Challenge Solution
