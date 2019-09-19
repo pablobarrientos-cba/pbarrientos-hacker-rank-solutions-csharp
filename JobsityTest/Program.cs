@@ -70,7 +70,6 @@ namespace JobsityTest
             }
             else
             {
-                result = number;
                 var b = Convert.ToDecimal(numbers.Dequeue());
                 var operand = operands.Dequeue();
 
