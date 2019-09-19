@@ -35,10 +35,7 @@ namespace JobsityTest
 
             foreach (var item in aux)
             {
-                if (item.Equals("-") ||
-                    item.Equals("+") ||
-                    item.Equals("*") ||
-                    item.Equals("/"))
+                if (item.Equals("-") || item.Equals("+") || item.Equals("*") || item.Equals("/"))
                 {
                     operands.Enqueue(item);
                 }
