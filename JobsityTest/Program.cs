@@ -33,7 +33,6 @@ namespace JobsityTest
             var nums = new Queue<int>();
             var operands = new Queue<string>();
 
-            // extract two arrays: one for numbers, one for operands
             foreach (var item in aux)
             {
                 if (item.Equals("-") ||
@@ -59,7 +58,7 @@ namespace JobsityTest
             var result = number;
 
             if (numbers.Count == 0 && operands.Count == 0) return result;
-            
+
             if (number == 0)
             {
                 var a = Convert.ToDecimal(numbers.Dequeue());
