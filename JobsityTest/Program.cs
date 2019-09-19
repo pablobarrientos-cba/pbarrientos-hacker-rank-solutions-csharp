@@ -54,31 +54,31 @@ namespace JobsityTest
             return individualResult.ToString(CultureInfo.InvariantCulture);
         }
 
-        private static decimal EvalExpression(decimal number, Queue<int> numStack, Queue<string> operationStack)
+        private static decimal EvalExpression(decimal number, Queue<int> numbers, Queue<string> operands)
         {
             var result = number;
 
-            if (numStack.Count == 0 && operationStack.Count == 0) return result;
-
+            if (numbers.Count == 0 && operands.Count == 0) return result;
+            
             if (number == 0)
             {
-                var a = Convert.ToDecimal(numStack.Dequeue());
-                var b = Convert.ToDecimal(numStack.Dequeue());
+                var a = Convert.ToDecimal(numbers.Dequeue());
+                var b = Convert.ToDecimal(numbers.Dequeue());
 
-                var operand = operationStack.Dequeue();
+                var operand = operands.Dequeue();
 
                 result = Evaluations[operand](a, b);
             }
             else
             {
                 result = number;
-                var b = Convert.ToDecimal(numStack.Dequeue());
-                var operand = operationStack.Dequeue();
+                var b = Convert.ToDecimal(numbers.Dequeue());
+                var operand = operands.Dequeue();
 
                 result = Evaluations[operand](result, b);
             }
 
-            return EvalExpression(result, numStack, operationStack);
+            return EvalExpression(result, numbers, operands);
         }
     }
 
