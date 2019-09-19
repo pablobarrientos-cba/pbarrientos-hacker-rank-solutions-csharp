@@ -63,7 +63,6 @@ namespace JobsityTest
             {
                 var a = Convert.ToDecimal(numbers.Dequeue());
                 var b = Convert.ToDecimal(numbers.Dequeue());
-
                 var operand = operands.Dequeue();
 
                 result = Evaluations[operand](a, b);
